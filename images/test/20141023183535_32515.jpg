@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Codeup墓地</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="template/ace/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="template/ace/bootstrap-theme.min.css">
+<link rel="stylesheet" href="template/ace/white.css">
+<link rel="stylesheet" href="template/ace/katex.min.css">
+<link rel="stylesheet" href="template/ace/mathjax.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">Codeup墓地</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      	                    <li ><a href="bbs.php">讨论版</a></li>
+	      
+              <li ><a href="faqs.php">常见问答</a></li>
+	      	                    <li ><a href="problemset.php">问题</a></li>
+              <li ><a href="category.php">来源/分类</a></li>
+              <li ><a href="status.php">状态</a></li>
+              <li ><a href="ranklist.php">排名</a></li>
+              <li ><a href="recent-contest.php">名校联赛</a></li>
+              <li ><a href="contest.php">竞赛&作业</a></li>
+	                    <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+	-->
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/ace/profile.php?148454713" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <p>
+<center> Last minute average judge speed: 73/day sps.
+<div id=submission style="width:80%;height:300px" ></div>
+</center>
+        </p>
+	<div class='panel panel-default' style='width:80%;margin:0 auto;'><div class='panel-heading'><h3>新闻<h3></div><div class='panel-body'><div class='panel panel-default'><div class='panel-heading'><big>NOIP在线课程</big>-<small>zhblue</small></div><div class='panel-body'><a href="https://ke.qq.com/course/237339?saleToken=20665" target="_blank">基础入门课程&nbsp;</a>&nbsp; &nbsp;&nbsp;<a href="https://ke.qq.com/course/245508?saleToken=20667" target="_blank">初赛课程</a>&nbsp; <a href="https://ke.qq.com/course/247615?saleToken=20666" target="_blank">&nbsp;复赛算法课程</a></div></div><div class='panel panel-default'><div class='panel-heading'><big>分类</big>-<small>zhblue</small></div><div class='panel-body'><div class="g-flow f-pr courses f-f0">
+	<div class="package f-cb" id="j-package">
+		<div class="block block-2 f-fl f-pr">
+			<span class="f-db grade"> 
+			<div class="icn">
+			</div>
+			<p class="txt">
+				日常练习
+			</p>
+</span> 
+			<div class="list">
+				<div class="f-cb f-pr">
+					<a href="problemset.php?ccid=12" class="f-db f-thide f-f0 itm f-fl">输入输出练习</a> 
+				</div>
+			</div>
+			<div class="list">
+				<div class="f-cb f-pr">
+					<div class="f-f0 f-fl f-pr itm itm1 j-itm">
+						<span class="f-thide cataName f-ib">基础类题目</span> <span class="moreIcon f-ib"></span> 
+						<div class="f-pa listBody j-item-list f-dn" id="list-13">
+							<div class="item-list f-pr">
+								<a class="courseItem f-thide" href="problemset.php?ccid=14">编程语言运用</a> <a class="courseItem f-thide" href="problemset.php?ccid=15">花样输出</a> <a class="courseItem f-thide" href="problemset.php?ccid=16">字符处理</a> <a class="courseItem f-thide" href="problemset.php?ccid=17">枚举</a> <a class="courseItem f-thide" href="problemset.php?ccid=18">模拟题</a> <a class="courseItem f-thide" href="problemset.php?ccid=19">日期处理</a> <a class="courseItem f-thide" href="problemset.php?ccid=20">规律题</a> <a class="courseItem f-thide" href="problemset.php?ccid=21">进制运算</a> <a class="courseItem f-thide" href="problemset.php?ccid=22">大数模拟</a> <a class="courseItem f-thide" href="problemset.php?ccid=23">位运算</a> <a class="courseItem f-thide" href="problemset.php?ccid=24">STL运用</a> <a class="courseItem f-thide" href="problemset.php?ccid=25">二分、三分</a> <a class="courseItem f-thide" href="problemset.php?ccid=26">构造题</a> <a class="courseItem f-thide" href="problemset.php?ccid=27">简单数学题</a> <a class="courseItem f-thide" href="problemset.php?ccid=28">冒泡排序、选择排序、插入排序</a> <a class="courseItem f-thide" href="problemset.php?ccid=29">快速排序、归并排序、希尔排序</a> <a class="courseItem f-thide" href="problemset.php?ccid=30">堆排序</a> <a class="courseItem f-thide" href="problemset.php?ccid=31">基数排序</a> <a class="courseItem f-thide" href="problemset.php?ccid=126">分治</a> <a class="courseItem f-thide" href="problemset.php?ccid=32">贪心</a> 
+								<div class="tipBg f-pa">
+								</div>
+								<div class="tipTp f-pa">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="f-cb f-pr">
+					<div class="f-f0 f-fl f-pr itm itm1 j-itm">
+						<span class="f-thide cataName f-ib">数据结构</span> <span class="moreIcon f-ib"></span> 
+						<div class="f-pa listBody j-item-list f-dn" id="list-33">
+							<div class="item-list f-pr">
+								<a class="courseItem f-thide" href="problemset.php?ccid=34">链表</a> <a class="courseItem f-thide" href="problemset.php?ccid=35">栈</a> <a class="courseItem f-thide" href="problemset.php?ccid=36">队列</a> <a class="courseItem f-thide" href="problemset.php?ccid=37">堆</a> <a class="courseItem f-thide" href="problemset.php?ccid=38">哈夫曼编码、哈夫曼树</a> <a class="courseItem f-thide" href="problemset.php?ccid=39">搜索</a> <a class="courseItem f-thide" href="problemset.php?ccid=40">深度优先搜索（DFS）</a> <a class="courseItem f-thide" href="problemset.php?ccid=41">广度优先搜索（BFS）</a> <a class="courseItem f-thide" href="problemset.php?ccid=42">启发式搜索</a> <a class="courseItem f-thide" href="problemset.php?ccid=43">并查集</a> <a class="courseItem f-thide" href="problemset.php?ccid=44">ST算法（RMQ问题）</a> <a class="courseItem f-thide" href="problemset.php?ccid=45">二叉搜索树</a> <a class="courseItem f-thide" href="problemset.php?ccid=46">线段树</a> <a class="courseItem f-thide" href="problemset.php?ccid=132">扫描线</a> <a class="courseItem f-thide" href="problemset.php?ccid=138">树链剖分</a> <a class="courseItem f-thide" href="problemset.php?ccid=47">主席树</a> <a class="courseItem f-thide" href="problemset.php?ccid=48">树状数组</a> <a class="courseItem f-thide" href="problemset.php?ccid=127">Treap-Tree</a> <a class="courseItem f-thide" href="problemset.php?ccid=49">Splay-Tree</a> <a class="courseItem f-thide" href="problemset.php?ccid=128">Link-Cut-Tree</a> <a class="courseItem f-thide" href="problemset.php?ccid=129">CDQ分治</a> <a class="courseItem f-thide" href="problemset.php?ccid=50">Manacher</a> <a class="courseItem f-thide" href="problemset.php?ccid=51">字典树</a> <a class="courseItem f-thide" href="problemset.php?ccid=52">KMP</a> <a class="courseItem f-thide" href="problemset.php?ccid=53">AC自动机</a> <a class="courseItem f-thide" href="problemset.php?ccid=54">哈希（Hash）</a> <a class="courseItem f-thide" href="problemset.php?ccid=118">后缀数组</a> 
+								<div class="tipBg f-pa">
+								</div>
+								<div class="tipTp f-pa">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="f-cb f-pr">
+					<div class="f-f0 f-fl f-pr itm itm1 j-itm">
+						<span class="f-thide cataName f-ib">树</span> <span class="moreIcon f-ib"></span> 
+						<div class="f-pa listBody j-item-list f-dn" id="list-55">
+							<div class="item-list f-pr">
+								<a class="courseItem f-thide" href="problemset.php?ccid=56">树的性质</a> <a class="courseItem f-thide" href="problemset.php?ccid=57">树的遍历</a> <a class="courseItem f-thide" href="problemset.php?ccid=122">树的重心</a> <a class="courseItem f-thide" href="problemset.php?ccid=131">树的直径</a> <a class="courseItem f-thide" href="problemset.php?ccid=58">最小生成树</a> <a class="courseItem f-thide" href="problemset.php?ccid=59">最小树形图</a> <a class="courseItem f-thide" href="problemset.php?ccid=60">最近公共祖先问题（LCA）</a> 
+								<div class="tipBg f-pa">
+								</div>
+								<div class="tipTp f-pa">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="f-cb f-pr">
+					<div class="f-f0 f-fl f-pr itm itm1 j-itm">
+						<span class="f-thide cataName f-ib">图论</span> <span class="moreIcon f-ib"></span> 
+						<div class="f-pa listBody j-item-list f-dn" id="list-61">
+							<div class="item-list f-pr">
+								<a class="courseItem f-thide" href="problemset.php?ccid=62">图的表示和储存及图的性质</a> <a class="courseItem f-thide" href="problemset.php?ccid=63">有向图、无向图、图的连通</a> <a class="courseItem f-thide" href="problemset.php?ccid=64">邻接矩阵, 邻接表</a> <a class="courseItem f-thide" href="problemset.php?ccid=65">Floyd</a> <a class="courseItem f-thide" href="problemset.php?ccid=66">Dijkstra</a> <a class="courseItem f-thide" href="problemset.php?ccid=67">Bellman-Ford</a> <a class="courseItem f-thide" href="problemset.php?ccid=68">SPFA</a> <a class="courseItem f-thide" href="problemset.php?ccid=139">K短路</a> <a class="courseItem f-thide" href="problemset.php?ccid=69">差分约束</a> <a class="courseItem f-thide" href="problemset.php?ccid=70">拓扑排序</a> <a class="courseItem f-thide" href="problemset.php?ccid=71">强连通算法</a> <a class="courseItem f-thide" href="problemset.php?ccid=72">2-SAT算法</a> <a class="courseItem f-thide" href="problemset.php?ccid=73">哈密顿路径</a> <a class="courseItem f-thide" href="problemset.php?ccid=74">欧拉路径</a> <a class="courseItem f-thide" href="problemset.php?ccid=75">边双连通算法</a> <a class="courseItem f-thide" href="problemset.php?ccid=76">二分图问题</a> <a class="courseItem f-thide" href="problemset.php?ccid=77">最大流</a> <a class="courseItem f-thide" href="problemset.php?ccid=78">费用流</a> <a class="courseItem f-thide" href="problemset.php?ccid=119">最小割</a> 
+								<div class="tipBg f-pa">
+								</div>
+								<div class="tipTp f-pa">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="f-cb f-pr">
+					<div class="f-f0 f-fl f-pr itm itm1 j-itm">
+						<span class="f-thide cataName f-ib">数论</span> <span class="moreIcon f-ib"></span> 
+						<div class="f-pa listBody j-item-list f-dn" id="list-79">
+							<div class="item-list f-pr">
+								<a class="courseItem f-thide" href="problemset.php?ccid=80">基础数论</a> <a class="courseItem f-thide" href="problemset.php?ccid=81">斐波那契数列</a> <a class="courseItem f-thide" href="problemset.php?ccid=82">错排公式</a> <a class="courseItem f-thide" href="problemset.php?ccid=83">最大公约数（GCD）、最小公倍数（LCM）</a> <a class="courseItem f-thide" href="problemset.php?ccid=84">素数相关算法</a> <a class="courseItem f-thide" href="problemset.php?ccid=85">积性函数</a> <a class="courseItem f-thide" href="problemset.php?ccid=86">同余定理</a> <a class="courseItem f-thide" href="problemset.php?ccid=87">中国剩余定理</a> <a class="courseItem f-thide" href="problemset.php?ccid=88">矩阵快速幂</a> <a class="courseItem f-thide" href="problemset.php?ccid=89">高斯消元解线性方程组</a> <a class="courseItem f-thide" href="problemset.php?ccid=90">排列组合</a> <a class="courseItem f-thide" href="problemset.php?ccid=91">容斥定理</a> <a class="courseItem f-thide" href="problemset.php?ccid=92">分治</a> <a class="courseItem f-thide" href="problemset.php?ccid=93">博弈</a> <a class="courseItem f-thide" href="problemset.php?ccid=94">康托展开</a> <a class="courseItem f-thide" href="problemset.php?ccid=95">哥德巴赫猜想</a> <a class="courseItem f-thide" href="problemset.php?ccid=96">约瑟夫环</a> <a class="courseItem f-thide" href="problemset.php?ccid=97">牛顿迭代</a> <a class="courseItem f-thide" href="problemset.php?ccid=98">欧拉函数</a> <a class="courseItem f-thide" href="problemset.php?ccid=123">丢番图方程</a> 
+								<div class="tipBg f-pa">
+								</div>
+								<div class="tipTp f-pa">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="f-cb f-pr">
+					<div class="f-f0 f-fl f-pr itm itm1 j-itm">
+						<span class="f-thide cataName f-ib">计算几何</span> <span class="moreIcon f-ib"></span> 
+						<div class="f-pa listBody j-item-list f-dn" id="list-99">
+							<div class="item-list f-pr">
+								<a class="courseItem f-thide" href="problemset.php?ccid=100">计算几何基础</a> <a class="courseItem f-thide" href="problemset.php?ccid=101">Pick定理</a> <a class="courseItem f-thide" href="problemset.php?ccid=137">线段（射线、直线）相交（垂直、平行）</a> <a class="courseItem f-thide" href="problemset.php?ccid=102">二维凸包</a> <a class="courseItem f-thide" href="problemset.php?ccid=133">最近圆对</a> <a class="courseItem f-thide" href="problemset.php?ccid=136">圆面积并、交</a> <a class="courseItem f-thide" href="problemset.php?ccid=134">最小圆覆盖</a> <a class="courseItem f-thide" href="problemset.php?ccid=130">半平面交</a> <a class="courseItem f-thide" href="problemset.php?ccid=124">DLX</a> <a class="courseItem f-thide" href="problemset.php?ccid=103">三维计算几何</a> <a class="courseItem f-thide" href="problemset.php?ccid=104">三维凸包</a> <a class="courseItem f-thide" href="problemset.php?ccid=135">旋转卡壳</a> <a class="courseItem f-thide" href="problemset.php?ccid=120">模拟退火</a> 
+								<div class="tipBg f-pa">
+								</div>
+								<div class="tipTp f-pa">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="f-cb f-pr">
+					<div class="f-f0 f-fl f-pr itm itm1 j-itm">
+						<span class="f-thide cataName f-ib">动态规划</span> <span class="moreIcon f-ib"></span> 
+						<div class="f-pa listBody j-item-list f-dn" id="list-105">
+							<div class="item-list f-pr">
+								<a class="courseItem f-thide" href="problemset.php?ccid=106">01背包</a> <a class="courseItem f-thide" href="problemset.php?ccid=107">完全背包</a> <a class="courseItem f-thide" href="problemset.php?ccid=108">多重背包</a> <a class="courseItem f-thide" href="problemset.php?ccid=125">分组背包</a> <a class="courseItem f-thide" href="problemset.php?ccid=109">混合背包</a> <a class="courseItem f-thide" href="problemset.php?ccid=110">递推DP</a> <a class="courseItem f-thide" href="problemset.php?ccid=111">数位DP</a> <a class="courseItem f-thide" href="problemset.php?ccid=112">状态压缩DP</a> <a class="courseItem f-thide" href="problemset.php?ccid=113">树形DP</a> <a class="courseItem f-thide" href="problemset.php?ccid=114">区间DP</a> <a class="courseItem f-thide" href="problemset.php?ccid=115">概率DP</a> <a class="courseItem f-thide" href="problemset.php?ccid=116">轮廓线DP</a> <a class="courseItem f-thide" href="problemset.php?ccid=121">斜率优化DP</a> <a class="courseItem f-thide" href="problemset.php?ccid=117">单调队列（栈）优化DP</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="block block-1 f-fl f-pr">
+			<span class="f-db grade"> 
+			<div class="icn">
+			</div>
+			<p class="txt">
+				教学
+			</p>
+</span> 
+			<div class="list">
+				<div class="f-cb f-pr">
+					<a href="problemset.php?ccid=143" class="f-db f-thide f-f0 itm f-fl">编程语言</a> 
+				</div>
+			</div>
+			<div class="list">
+				<div class="f-cb f-pr">
+					<a href="problemset.php?ccid=144" class="f-db f-thide f-f0 itm f-fl">数据结构与算法</a> 
+				</div>
+			</div>
+		</div>
+		<div class="block block-3 f-fl f-pr">
+			<span class="f-db grade"> 
+			<div class="icn">
+			</div>
+			<p class="txt">
+				应试
+			</p>
+</span> 
+			<div class="list">
+				<div class="f-cb f-pr">
+					<a href="problemset.php?ccid=142" class="f-db f-thide f-f0 itm f-fl">计算机二级</a> 
+				</div>
+			</div>
+			<div class="list">
+				<div class="f-cb f-pr">
+					<a href="problemset.php?ccid=146" class="f-db f-thide f-f0 itm f-fl">PAT—计算机程序设计能力考试</a> 
+				</div>
+			</div>
+			<div class="list">
+				<div class="f-cb f-pr">
+					<a href="problemset.php?ccid=147" class="f-db f-thide f-f0 itm f-fl">NOIP全国联赛</a> 
+				</div>
+			</div>
+		</div>
+		<div class="block block-4 f-fl f-pr">
+			<span class="f-db grade"> 
+			<div class="icn">
+			</div>
+			<p class="txt">
+				教材
+			</p>
+</span> 
+			<div class="list">
+				<div class="f-cb f-pr">
+					<a href="problemset.php?ccid=140" class="f-db f-thide f-f0 itm f-fl">《C程序设计（第三版）》—谭浩强</a> 
+				</div>
+			</div>
+			<div class="list">
+				<div class="f-cb f-pr">
+					<a href="problemset.php?ccid=145" class="f-db f-thide f-f0 itm f-fl">《C程序设计（第四版）》—谭浩强</a> 
+				</div>
+			</div>
+			<div class="list">
+				<div class="f-cb f-pr">
+					<a href="problemset.php?ccid=141" class="f-db f-thide f-f0 itm f-fl">《C语言程序设计》—江宝钏</a> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div></div></div><div class='panel-footer'>请到<a target='_blank' href='https://github.com/zhblue/hustoj'> GitHub</a>来，给我们加个星星！&nbsp;Please give us a star on <a target='_blank' href='https://github.com/zhblue/hustoj'>Github</a>!</div></div>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="template/ace/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="template/ace/bootstrap.min.js"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<marquee style='margin-top:10px'  direction='up'   id=broadcast scrollamount=1 scrolldelay=50 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"<p class=\"center\" style=\"text-align:center;\">\r\n\t<span>\u5982\u679c\u5e0c\u671b\u83b7\u5f97\u672c\u7ad9\u9898\u76ee\u7684\u6d4b\u8bd5\u6570\u636e\uff0c\u8bf7\u524d\u5f80<\/span><a class=\"ke-insertfile\" href=\"http:\/\/tk.hustoj.com\/\" target=\"_blank\">TK\u9898\u5e93<\/a><span>\uff0c\u6839\u636e\u9898\u53f7\u6216\u6807\u9898\uff0c\u641c\u7d22\u4e0b\u8f7d\u3002&nbsp;<\/span>\r\n<br \/>\r\n<p class=\"center\" style=\"text-align:center;\">\r\n\t\u652f\u4ed8\u5b9d\u626b\u4e00\u626b<span>\u9886\u7ea2\u5305<\/span><img src=\"http:\/\/hustoj.com\/alipay.png\" width=\"96px\" \/>\u652f\u63f4\u672c\u7ad9\u7f34\u670d\u52a1\u5668\u8fd0\u884c\u8d39\r\n<br \/>\r\n<p class=\"center\" style=\"text-align:center;\">\r\n\t<br \/>\r\n<br \/>"+"</marquee>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='96px'><br> 欢迎关注微信公众号onlinejudge<br><img src=\"http://tk.hustoj.com/upload/image/20180621/20180621190059_62537.png\" width=\"200\" height=\"301\"  alt='支付宝扫一扫领红包'/></div>");
+});
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
+
+</script>
+
+	    
+ <script language="javascript" type="text/javascript" src="include/jquery.flot.js"></script>
+<script type="text/javascript">
+$(function () {
+var d1 = [["1569945600000","73"],["1569859200000","193"],["1569772800000","245"],["1569686400000","327"],["1569600000000","353"],["1569513600000","317"],["1569427200000","362"],["1569340800000","389"],["1569254400000","433"],["1569168000000","555"],["1569081600000","481"],["1568995200000","504"],["1568908800000","361"],["1568822400000","440"],["1568736000000","458"],["1568649600000","439"],["1568563200000","465"],["1568476800000","377"],["1568390400000","391"],["1568304000000","379"],["1568217600000","397"],["1568131200000","61"]];
+var d2 = [["1569945600000","42"],["1569859200000","93"],["1569772800000","120"],["1569686400000","182"],["1569600000000","141"],["1569513600000","148"],["1569427200000","154"],["1569340800000","211"],["1569254400000","222"],["1569168000000","281"],["1569081600000","233"],["1568995200000","256"],["1568908800000","172"],["1568822400000","176"],["1568736000000","216"],["1568649600000","243"],["1568563200000","213"],["1568476800000","164"],["1568390400000","179"],["1568304000000","181"],["1568217600000","181"],["1568131200000","34"]];
+$.plot($("#submission"), [
+{label:"提交",data:d1,lines: { show: true }},
+{label:"正确",data:d2,bars:{show:true}} ],{
+grid: {
+backgroundColor: { colors: ["#fff", "#eee"] }
+},
+xaxis: {
+mode: "time"//,
+//max:(new Date()).getTime(),
+//min:(new Date()).getTime()-100*24*3600*1000
+}
+});
+});
+//alert((new Date()).getTime());
+</script>
+  </body>
+</html>
+<!--not cached-->
