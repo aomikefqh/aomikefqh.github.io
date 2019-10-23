@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/taiji.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/taiji.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/taiji.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
+
+
+  <meta name="keywords" content="专业课,基础,408,组成原理,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="挑战408——组成原理（1）——看看我们要学什么计算机的发展历程我一直觉得，要想深入理解，学习一门课程，就必须了解一下它的发展史，尤其是计算机发展对比其他的专业来说可以说是相当的晚了。才100多年历史。所以有机会我一定要好好看看这100年计算机都发生了什么。 言归正传。世界上第一台计算机是1946年在美国诞生的ENIAC。1945年，冯诺依曼提出了存储程序的思想：必须将事先编好的原始程序和数据一同">
+<meta name="keywords" content="专业课,基础,408,组成原理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="挑战408-计算机组成原理">
+<meta property="og:url" content="https://aomikefqh.github.io/2019/10/23/挑战408-计算机组成原理/index.html">
+<meta property="og:site_name" content="禅与代码艺术哲学">
+<meta property="og:description" content="挑战408——组成原理（1）——看看我们要学什么计算机的发展历程我一直觉得，要想深入理解，学习一门课程，就必须了解一下它的发展史，尤其是计算机发展对比其他的专业来说可以说是相当的晚了。才100多年历史。所以有机会我一定要好好看看这100年计算机都发生了什么。 言归正传。世界上第一台计算机是1946年在美国诞生的ENIAC。1945年，冯诺依曼提出了存储程序的思想：必须将事先编好的原始程序和数据一同">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%98%8E%E8%A7%A3C%E8%AF%AD%E8%A8%80-%E4%B8%AD%E7%BA%A7%E7%AF%873%20-%20%E5%89%AF%E6%9C%AC/20191018084907159.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%98%8E%E8%A7%A3C%E8%AF%AD%E8%A8%80-%E4%B8%AD%E7%BA%A7%E7%AF%873%20-%20%E5%89%AF%E6%9C%AC/20191018084843860.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017000449668.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017000611637.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/2018101711130910.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017111327823.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017112022802.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017112139944.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017112714129.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017112800625.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/2018101711284754.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/2018101711292427.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017113050368.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017113536533.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017113507633.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017113612361.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017113642530.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017115528240.png">
+<meta property="og:image" content="https://aomikefqh.github.io/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/2018101712015060.png">
+<meta property="og:updated_time" content="2019-10-23T14:14:02.602Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="挑战408-计算机组成原理">
+<meta name="twitter:description" content="挑战408——组成原理（1）——看看我们要学什么计算机的发展历程我一直觉得，要想深入理解，学习一门课程，就必须了解一下它的发展史，尤其是计算机发展对比其他的专业来说可以说是相当的晚了。才100多年历史。所以有机会我一定要好好看看这100年计算机都发生了什么。 言归正传。世界上第一台计算机是1946年在美国诞生的ENIAC。1945年，冯诺依曼提出了存储程序的思想：必须将事先编好的原始程序和数据一同">
+<meta name="twitter:image" content="https://aomikefqh.github.io/images/%E6%98%8E%E8%A7%A3C%E8%AF%AD%E8%A8%80-%E4%B8%AD%E7%BA%A7%E7%AF%873%20-%20%E5%89%AF%E6%9C%AC/20191018084907159.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://aomikefqh.github.io/2019/10/23/挑战408-计算机组成原理/">
+
+
+
+
+
+  <title>挑战408-计算机组成原理 | 禅与代码艺术哲学</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?820532c41084278de5f3465e1070de43";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+   <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">禅与代码艺术哲学</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">道生一，一生二，二生三，三生万物。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://aomikefqh.github.io/2019/10/23/挑战408-计算机组成原理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aomike">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/aomi.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="禅与代码艺术哲学">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">挑战408-计算机组成原理</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-23T21:56:04+08:00">
+                2019-10-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/408/" itemprop="url" rel="index">
+                    <span itemprop="name">408</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/408/计算机组成原理/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机组成原理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/10/23/挑战408-计算机组成原理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/23/挑战408-计算机组成原理/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+        <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+        </div>
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="挑战408——组成原理（1）——看看我们要学什么"><a href="#挑战408——组成原理（1）——看看我们要学什么" class="headerlink" title="挑战408——组成原理（1）——看看我们要学什么"></a>挑战408——组成原理（1）——看看我们要学什么</h2><h3 id="计算机的发展历程"><a href="#计算机的发展历程" class="headerlink" title="计算机的发展历程"></a>计算机的发展历程</h3><p>我一直觉得，要想深入理解，学习一门课程，就必须了解一下它的发展史，尤其是计算机发展对比其他的专业来说可以说是相当的晚了。才100多年历史。所以有机会我一定要好好看看这100年计算机都发生了什么。 言归正传。世界上第一台计算机是1946年在美国诞生的ENIAC。1945年，冯诺依曼提出了存储程序的思想：必须将事先编好的原始程序和数据一同送入主存后，才能执行程序，一旦程序被执行，计算机能在无须人工操作的干预下，自动完成逐条取出指令，并执行的任务。 1965年，Intle公司的缔造者Gordon提出，“微芯片上的集成的晶体管数目，每三年番2倍”的规律，这就是著名的摩尔定律。</p>
+<h3 id="硬件发展带来的问题"><a href="#硬件发展带来的问题" class="headerlink" title="硬件发展带来的问题"></a>硬件发展带来的问题</h3><p>微处理器的发展，几乎每3年，处理器的性能就提高4—5倍，但计算机上的一些其他部位性能提高的速度达不到该水平 。影响不同部件性能不匹配的主要处理因素为CPU与主存间接口和CPU与外设的接口问题，具体体现在： - CPU与主存之间：是整个计算机最重要的通路，负责在主存和处理器之间传送指令和数据。试想如果与CPU之间的数据传送跟不上CPU的要求，那么CPU就会处于等待状态。一般的我们采取如下方式进行处理： - 加宽数据总线的宽度（道路太挤，扩宽一下） - 在两者之间设置高速缓存（Cache，先给CPU提前准备好原料），并发展为片内缓存和分级缓存。 - 利用高速连接总线和分层总线，来缓冲和分流数据。以提高处理器与存储器之间的连接宽带。 - CPU与外设之间的接口：常见的处理方式： - 加入缓冲机制 - 用高速互连总线以及更快的总线结构来解决。<br>这些问题都是硬件发展中带来的问题，也是这门课程重点讨论的问题。下面介绍一下软件的发展历程。个人认为仅做了解即可。</p>
+<h3 id="软件的发展"><a href="#软件的发展" class="headerlink" title="软件的发展"></a>软件的发展</h3><p>软件技术的发展主要体现在编程语言之间的进步。编程语言大致经历了如下的阶段： 机器语言(0 1 代码)——&gt;汇编语言（与机器语言对应）——&gt;高级语言（C++,JAVA）而高级语言不能直接运行，而是需要由程序翻译成机器语言，所以将高级语言程序翻译为机器语言程序的软件，称为翻译程序。而翻译程序又根据翻译形式的不同，分为两种形式： - 编译程序：先把所有的程序都全部翻译完，再执行 - 解释程序：翻译一次，执行一次，边翻译边执行</p>
+<h3 id="计算机系统的层次结构"><a href="#计算机系统的层次结构" class="headerlink" title="计算机系统的层次结构"></a>计算机系统的层次结构</h3><p>先上图：</p>
+<p><img src="/images/%E6%98%8E%E8%A7%A3C%E8%AF%AD%E8%A8%80-%E4%B8%AD%E7%BA%A7%E7%AF%873%20-%20%E5%89%AF%E6%9C%AC/20191018084907159.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p>说白了，这个体系就分为两个部分，软件范围(M4 - M 2)和硬件范围（M1-M0）.而软件与硬件之间需要有一个桥梁，以便软件和硬件能相互合作，交互。这个桥梁位于 M2和M1之间，这个桥梁称为指令集体结构（ISA）。也就是说，软件与硬件的交互是通过指令来进行的。<br>典型的冯诺依曼体系结构及其特点</p>
+<p><img src="/images/%E6%98%8E%E8%A7%A3C%E8%AF%AD%E8%A8%80-%E4%B8%AD%E7%BA%A7%E7%AF%873%20-%20%E5%89%AF%E6%9C%AC/20191018084843860.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p>机器以运算器为中心。I/O设备与存储器之间的数据传送通过运算器完成 2. 计算机由运算器，控制器，存储器，I/O设备 五大部件组成。 3. 指令和数据地位相同，按地址访问，按顺序存放<br>PS：这门课程就是以2为主线，讲解计算机的组成原理的。</p>
+<h3 id="计算机软件的分类"><a href="#计算机软件的分类" class="headerlink" title="计算机软件的分类"></a>计算机软件的分类</h3><p>一般的我们将计算机软件分为：系统软件和应用软件。其中系统软件包括操作系统，数据库管理系统，语言处理系统等等。</p>
+<h3 id="计算机的性能指标"><a href="#计算机的性能指标" class="headerlink" title="计算机的性能指标"></a>计算机的性能指标</h3><p>机器字长：指CPU一次能处理的数据的位数。字长越长，数的表示范围越大，精度越高<br>存储容量：包括主存和辅存容量。具体的到讲了存储器再说。<br>运算速度：<br>MIPS：单位时间内执行指令的平均条数<br>CPI：执行一条指令所需要的时钟周期<br>FLOPS：每秒的浮点数运算的次数<br>最常见的问题：指令和数据如何区分？</p>
+<h1 id="挑战408——组成原理（2）——二进制数和十六进制数"><a href="#挑战408——组成原理（2）——二进制数和十六进制数" class="headerlink" title="挑战408——组成原理（2）——二进制数和十六进制数"></a>挑战408——组成原理（2）——二进制数和十六进制数</h1><p>这算是数据的表示运算这一部分的第一篇文章了，这部分多且繁杂，因为我们通常都是以10进制的数进行计算和表示的，用了10几年，突然接受一种新的表示方式难免会导致理解困难。初学这章我也是半懵逼状态的，好在复习了一轮后，又去多次问了老师相应的问题，才算有个大致的了解。所以这系列的文章如果有不对的地方，欢迎批评指正。<br>这篇是基础篇，是学习后面的各种运算的基础，所以得好好看，好好理解。</p>
+<h3 id="从10进制-gt-2进制-gt-16进制"><a href="#从10进制-gt-2进制-gt-16进制" class="headerlink" title="从10进制-&gt;2进制-&gt;16进制"></a>从10进制-&gt;2进制-&gt;16进制</h3><p>我们的日常习惯，是用10进制表示的，如果满10了就向前进一位。比如 9 + 2 = 11. 9 + 2 = 10 + 1,所以向前进一位，剩下的位数填在后面。<br>那么好端端的为什么我们在机器中不用10进制表示而非要改变常规的思路使用二进制呢？我们当然不是吃饱了撑的，是没办法的事，因为这是由计算机的硬件决定的（可以多去百度，不细说）。在接下来的学习中，10进制到2进制的转换就是家常便饭了。具体的转换规则我想打算考408的不可能不会，所以不说。<br>类似的，计算机也常有16进制来表示一些数，如果说二进制是为了让计算机更容易理解我们的10进制表达方式，那么16进制就是为了让我们更容易读懂计算机的表达方式，而且利用16进制数可以快速的在2进制和16进制之间相互转化。（<strong>因为4位2进制数恰好可以表示16个数字（即0-15）</strong>）。16进制数最常用的是在表示物理内存空间的时候，比如我们看到的0xAFFFH等等就是典型的16进制数。</p>
+<h3 id="BCD编码"><a href="#BCD编码" class="headerlink" title="BCD编码"></a>BCD编码</h3><p>为了方便的表示各二进制与其他进制的转换关系，于是有了BCD编码，编码的种类很多，我们就讲最简单，最常用的8421编码。特点是用<strong>4位二进制数表示一位16进制</strong>的数。<br>下面的表列出了8421编码的对应项（完全可以自己手动算，要记住下面的这个内容）：</p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017000449668.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017000611637.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p>为什么强调这张表的重要性呢？我们看看怎么转换吧：<br>比如，给出一个16进制的数036A，我们化为二进制数就可以这样化：</p>
+<p>从末尾开始，将每个16进制的位数都按照形式相应的写出二进制数。<br>拼接即可。<br>所以，直接写出二进制数为：<br>0000,0011,0110,1010（是不是特别方便？这里的逗号是为了方便观察而加的，实际不存在）。</p>
+<h1 id="挑战408——组成原理（3）——原码，补码，反码"><a href="#挑战408——组成原理（3）——原码，补码，反码" class="headerlink" title="挑战408——组成原理（3）——原码，补码，反码"></a>挑战408——组成原理（3）——原码，补码，反码</h1><p>计算机中的数据分为数值数据和非数值型数据（如声音，图像等等）。我们接下来主要谈的是数值型数据。<br>在现实的生活中，数值数据主要分为实数和整数两大类，在计算机中，整数用定点数表示，实数用浮点数表示，而所有带符号的整形都用补码表示。目前通用计算机中浮点数大多数采用IEEE754标准，其中尾数采用定点原码表示，所以浮点数的算术运算涉及原码的加减乘除运算。</p>
+<h3 id="无符号数与有符号数"><a href="#无符号数与有符号数" class="headerlink" title="无符号数与有符号数"></a>无符号数与有符号数</h3><p>无符号数，即没有正负号的数，是数的绝对值，在其面前添上正负号，便成了有符号的数。计算机的数均存放在寄存器中，通常我们称<strong>寄存器的位数为机器字长</strong>，当存放有符号数的时候，需要占用以为存放符合位，所有，如若机器字长为16位，那么：</p>
+<p>无符号数可表示的范围为 0 — 2^（16） -1<br>有符号数可表示的范围为 -2^15 — 2^（15） - 1<br>15次方是因为符号位占用了一位。<br>那么计算机如何表示有符号数呢？我们规定，用0表示正号，用1表示负号，这样符号也就被数字化了，并规定放在有效数据之前，例如：<br>+0.1011 在机器中表示为0（小数点位置）1011<br>-1100 在机器中表示为1，1100（小数点位置）<br>为了方便区分手写的数和将符号数字化的数，我们把前者称为真值，后者称为机器数。即<br>-1100（真值） -&gt; 11100（机器数）<br>将符号数字化以后带来了新的问题，运算时，符号位是否参与运算，如果是，那么如何处理？为了处理好这些问题，于是就引入了原码，补码，反码和移码等编码方式。</p>
+<h3 id="原码"><a href="#原码" class="headerlink" title="原码"></a>原码</h3><p>原码，又称带符号的绝对值表示，符号位为<strong>0表示正，为1表示负。</strong>用大白话来讲，就是直接将数值部分写成二进制数然后前面添上0或者1，用来表示正负号。</p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/2018101711130910.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017111327823.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p>其实上面的公式我们只需要了解即可，实际的转换很简单<br>比如X = +1110时 [X]原 = 0,1110<br>X = -1110时 [X]原 = 1,1110 （逗号只是为了区分符号位实际不存在）<br>X = 0.1101时 [X]原 = 0.1101<br>X = -0.1101时 [X]原 = 1,1110（注意不是10.1101，因为0并不是有效数据位）。</p>
+<p><strong>注意：</strong><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017112022802.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p>若字长为n+1，那么原码整数的表示范围为：</p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017112139944.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p>原码中0的表示方式有两种：</p>
+<h3 id="补码"><a href="#补码" class="headerlink" title="补码"></a>补码</h3><p>如果说是这几种码制中最重要的编码方式，一点也不为过。计算机中存放的数值方式大多数是用补码存放，计算（尤其是减法做加法运算时）时也通常采用补码运算方式，因此要对补码非常敏感。</p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017112714129.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017112800625.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p>对于纯整数：<img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/2018101711284754.png" alt="å¨è¿éæå¥å¾çæè¿°"><br>对于纯小数：</p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/2018101711292427.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p>而对于0而言，</p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017113050368.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p>具体的实例不举先，先看看我们的反码，我们没有必要按上面的数学公式往上套。</p>
+<h3 id="反码"><a href="#反码" class="headerlink" title="反码"></a>反码</h3><p>反码，通常用来由原码求补码或者由补码求原码的过渡环节。<br>我们先看看数学定义：</p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017113536533.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017113507633.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p>对于纯小数：</p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017113612361.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p>对于纯整数：</p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017113642530.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p>所以，记住上面的就够了，我们具体看看运算过程，取反操作就是将原码中的0换成1,1换成0.就完事了。<br>当X = +1101时，X反 = 0，1101<br>当X = -1101时，X反 = 1，0010（当为负数的时候，符号位不变，数值位执行取反操作）<br>当X = +0.0110时，X反 = 0.0110<br>当X = -0.0110时，X反 = 1.1001</p>
+<p>对于0来说，反码的表示方式也有两种（0，000或者1,111），这就自己去写了。</p>
+<h3 id="三种码制之间的关系（最重要）"><a href="#三种码制之间的关系（最重要）" class="headerlink" title="三种码制之间的关系（最重要）"></a>三种码制之间的关系（最重要）</h3><p>前面的数学公式是应付表示范围类的题目，那么这些内容就是应付计算题的题目：</p>
+<p>三种机器码的最高位均为符号位，符号位与数值位用逗号隔开<br>当<strong>真值为正时，原码补码反码表示方式相同。</strong><br>当<strong>真值为负时，三者表现都不同，但是符号位都用1表示，补码可以用“原码求反（不含符号位）后加1”求得。而反码是原码除了符号位以外的部分都进行取反操作</strong>。<br>下面举个简单的计算例子：</p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/20181017115528240.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<h3 id="移码"><a href="#移码" class="headerlink" title="移码"></a>移码</h3><p>当真值用补码表示的时候，由于符号位与数值位一起编码，这与习惯上表示不同，我们很难从补码形式上直接判断真值的大小。但是如果对每个<strong>真值位</strong>（注意不包含符号位），都加上一个2^n（n为整数位），那么在数轴上，移码表示的范围恰好对应真值在数轴上移动2的n次方个单元。所以叫做移码。</p>
+<p><img src="/images/%E6%8C%91%E6%88%98408-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/2018101712015060.png" alt="å¨è¿éæå¥å¾çæè¿°"></p>
+<p>它常常用来表示浮点数的阶数，因为它只能表示整数。<br>对于移码来说，0的表示是唯一的，假设字长为6位（含一个符号位）那么0的表示为：<br>+0移 = (2^5) + 0 =1,00000<br>-0移 = (2^5) - 0 =1,00000<br><strong>特点：</strong></p>
+<p>0 的表示方式唯一<br>对于同一个真值，移码和补码相差一个符号位，且相反，例如：-11110 补码为1,00010，移码为：000010<br>引入移码是为了直观的判断真值大小，所以移码大，真值就大</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wx.png" alt="aomike 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/zfb.png" alt="aomike 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/专业课/" rel="tag"><i class="fa fa-tag"></i> 专业课</a>
+          
+            <a href="/tags/基础/" rel="tag"><i class="fa fa-tag"></i> 基础</a>
+          
+            <a href="/tags/408/" rel="tag"><i class="fa fa-tag"></i> 408</a>
+          
+            <a href="/tags/组成原理/" rel="tag"><i class="fa fa-tag"></i> 组成原理</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/18/基础算法/" rel="next" title="算法学习">
+                <i class="fa fa-chevron-left"></i> 算法学习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/aomi.png" alt="aomike">
+            
+              <p class="site-author-name" itemprop="name">aomike</p>
+              <p class="site-description motion-element" itemprop="description">上士闻道,勤而行之;中士闻道,若存若亡;下士闻道,大笑之。不笑不足以为道。</p>
+          </div>
+           <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/aomikefqh" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/281cc0a630be" target="_blank" title="JianShu">
+                      
+                        <i class="fa fa-fw fa-cubes"></i>JianShu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/ao_mike" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-cuttlefish"></i>CSDN</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/fu-qi-hao-83/activities" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-zhihu"></i>Zhihu</a>
+                  </span>
+                
+            </div>
+          
+		  
+		  
+           <div>
+              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=536057&auto=1&height=66"></iframe>
+           </div>
+		       
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://chen-qingyu.github.io/" title="青羽博客" target="_blank">青羽博客</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://zhousiwei.gitee.io/" title="試毅-思伟" target="_blank">試毅-思伟</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.sqlsec.com/" title="国光" target="_blank">国光</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.lelovepan.cn/" title="尼格尔叶子" target="_blank">尼格尔叶子</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#挑战408——组成原理（1）——看看我们要学什么"><span class="nav-number">1.</span> <span class="nav-text">挑战408——组成原理（1）——看看我们要学什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机的发展历程"><span class="nav-number">1.1.</span> <span class="nav-text">计算机的发展历程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#硬件发展带来的问题"><span class="nav-number">1.2.</span> <span class="nav-text">硬件发展带来的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件的发展"><span class="nav-number">1.3.</span> <span class="nav-text">软件的发展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机系统的层次结构"><span class="nav-number">1.4.</span> <span class="nav-text">计算机系统的层次结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机软件的分类"><span class="nav-number">1.5.</span> <span class="nav-text">计算机软件的分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机的性能指标"><span class="nav-number">1.6.</span> <span class="nav-text">计算机的性能指标</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#挑战408——组成原理（2）——二进制数和十六进制数"><span class="nav-number"></span> <span class="nav-text">挑战408——组成原理（2）——二进制数和十六进制数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#从10进制-gt-2进制-gt-16进制"><span class="nav-number">0.1.</span> <span class="nav-text">从10进制-&gt;2进制-&gt;16进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BCD编码"><span class="nav-number">0.2.</span> <span class="nav-text">BCD编码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#挑战408——组成原理（3）——原码，补码，反码"><span class="nav-number"></span> <span class="nav-text">挑战408——组成原理（3）——原码，补码，反码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无符号数与有符号数"><span class="nav-number">0.1.</span> <span class="nav-text">无符号数与有符号数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原码"><span class="nav-number">0.2.</span> <span class="nav-text">原码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补码"><span class="nav-number">0.3.</span> <span class="nav-text">补码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反码"><span class="nav-number">0.4.</span> <span class="nav-text">反码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种码制之间的关系（最重要）"><span class="nav-number">0.5.</span> <span class="nav-text">三种码制之间的关系（最重要）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移码"><span class="nav-number">0.6.</span> <span class="nav-text">移码</span></a></li></ol></li></div>
+            		
+          </div>	
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">aomike</span>
+  
+</div>
+
+<span id="sitetime"></span>
+<script language="javascript">
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+		var t1 = Date.UTC(2018,02,13,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+	siteTime();
+</script>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+-->
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+   <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: false,
+        appId: 'sDBMKTVaCkgHnSj7SI0XdQQx-gzGzoHsz',
+        appKey: 'GdlusCelDLjPX1PGFOcNp5oS',
+        placeholder: '在这里留下你的看法或者疑问',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
+
