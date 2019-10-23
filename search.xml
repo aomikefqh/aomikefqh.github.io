@@ -9,8 +9,8 @@
         <category>计算机组成原理</category>
       </categories>
       <tags>
-        <tag>专业课</tag>
         <tag>基础</tag>
+        <tag>专业课</tag>
         <tag>408</tag>
         <tag>组成原理</tag>
       </tags>
@@ -23,10 +23,10 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>基础</tag>
-        <tag>语法</tag>
-        <tag>C语言</tag>
         <tag>算法</tag>
+        <tag>语法</tag>
+        <tag>基础</tag>
+        <tag>C语言</tag>
       </tags>
   </entry>
   <entry>
@@ -37,9 +37,9 @@
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
-        <tag>基础</tag>
         <tag>算法</tag>
+        <tag>基础</tag>
+        <tag>笔记</tag>
         <tag>C</tag>
       </tags>
   </entry>
@@ -51,9 +51,9 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>语法</tag>
         <tag>PAT</tag>
+        <tag>笔记</tag>
         <tag>C</tag>
       </tags>
   </entry>
@@ -65,10 +65,10 @@
         <category>语法练习</category>
       </categories>
       <tags>
-        <tag>基础</tag>
-        <tag>语法</tag>
-        <tag>算法</tag>
         <tag>C++语言</tag>
+        <tag>算法</tag>
+        <tag>语法</tag>
+        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
@@ -80,8 +80,8 @@
         <category>语法练习</category>
       </categories>
       <tags>
-        <tag>基础</tag>
         <tag>语法</tag>
+        <tag>基础</tag>
         <tag>C语言</tag>
         <tag>实践</tag>
       </tags>
@@ -94,10 +94,10 @@
         <category>CS基础</category>
       </categories>
       <tags>
+        <tag>基础</tag>
+        <tag>笔记</tag>
         <tag>计组</tag>
         <tag>专业课</tag>
-        <tag>笔记</tag>
-        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
@@ -113,10 +113,10 @@
         <category>语法练习</category>
       </categories>
       <tags>
-        <tag>基础</tag>
-        <tag>语法</tag>
-        <tag>C语言</tag>
         <tag>算法</tag>
+        <tag>语法</tag>
+        <tag>基础</tag>
+        <tag>C语言</tag>
       </tags>
   </entry>
   <entry>
@@ -127,9 +127,9 @@
         <category>语法练习</category>
       </categories>
       <tags>
-        <tag>基础</tag>
-        <tag>语法</tag>
         <tag>算法</tag>
+        <tag>语法</tag>
+        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
